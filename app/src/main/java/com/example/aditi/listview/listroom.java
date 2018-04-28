@@ -12,11 +12,11 @@ public class listroom extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_listroom);
 
         String [] classrooms = {"TP901","TP902","TP805","TP806", "TP801","TP1002"};
-        ListAdapter myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,classrooms);
-        ListView myListView = (ListView) findViewById(R.id.myListView);
+        ListAdapter myAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, classrooms);
+        ListView myListView = findViewById(R.id.myListView);
         myListView.setAdapter(myAdapter);
     }
 }
